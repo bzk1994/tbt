@@ -5,6 +5,14 @@
 body{
 	font:12px "Microsoft Yahei";
 }
+li{
+	list-style: none;
+}
+button, input, select, textarea {
+    font-size: 100%;
+    font-family: "Microsoft YaHei", 微软雅黑,\9ed1\4f53,\5b8b\4f53, "Microsoft JhengHei", 华文细黑, STHeiti, MingLiu;
+    outline: none;
+}
 .header_top a,em{
 	color: #999;
 	text-decoration: none;
@@ -153,6 +161,8 @@ header{
 	line-height: 30px;
 	border:1px solid #eee;
 	border-top: 0;
+	z-index: 5;
+    position: absolute;
 }
 .select_box>li{
 	padding-left: 15px;
@@ -246,14 +256,276 @@ header{
 	color: #000;
 	text-decoration: none;
 }
+
 .header_menu>ul>li{
 	float: left;
 	padding: 0 20px;
 	line-height: 40px;
 	height: 40px;
 	list-style: none;
+	position: relative;
+}
+.header_menu>ul>li:hover{
+	background-color: #01af63;
+}
+.header_menu>ul>li:hover b{
+	display: none;
+}
+.header_menu>ul>li>a{
+	font-size: 18px;
+}
+.header_menu>ul>li:hover>a{
+	color: #fff;
+}
+.header_menu>ul>li>dl{
+	display: none;
+}
+.header_menu>ul>li>b{
+	width: 1px;
+	height: 16px;
+	background-color: #eee;
+	position: absolute;
+	right: 0;
+	top:13px;
 }
 
+/*设置当前banner样式*/
+.on>a>span{
+	color: #fff;
+}
+.on>b{
+	display: none;
+}
+.on{
+	background-color: #01af63;
+}
+
+.main a{
+	padding: 0 25px;
+}
+/*设置带下拉菜单banner样式*/
+.header_menu>ul>.has_secondMenu{
+	width: 178px;
+	padding: 0;
+	position: relative;
+}
+.menu_arrow_two{
+	position: absolute;
+	display: inline-block;
+	width: 7px;
+	height: 4px;
+	right: 20px;
+	top: 20px;
+	background: url(../img/global.png) no-repeat;
+	background-position: -77px 0;
+}
+
+/*.has_secondMenu:hover{
+	background-color: #01af63;		
+}*/
+
+.has_secondMenu span{
+	margin-left: 45px;
+}
+.has_secondMenu dl{
+	color: #fff;
+	background-color: #019d59;
+	width: 100%;
+}
+.has_secondMenu>dl>dd:hover{
+	background-color: #018d50;
+}
+.has_secondMenu>dl>dd>a{
+	margin-left: 45px;
+	color: #fff;
+
+}
+.has_secondMenu:hover dl{
+	display: block;
+}
+dd .dd_new{
+	display: inline-block;
+	width: 20px;
+	height: 11px;
+	background: url(../img/global.png) -200px -15px no-repeat;
+	margin-bottom: 5px;
+}
+.has_secondMenu:hover em{
+	background-position: -84px 0;
+}
+.has_secondMenu:hover>b{
+	display: none;
+}
+
+.has_hotIcon span{
+	margin:0 30px;
+}
+.has_hotIcon{
+	position: relative;
+}
+.menu_arrow_free{
+	position: absolute;
+	right: 22px;
+	top: 5px;
+	display: inline-block;
+	width: 25px;
+	height: 16px;
+	background: url(../img/global.png) -175px -15px no-repeat;
+}
+
+/*********手机APP推广*/
+.q_code{
+	position: absolute;
+	right: 162px;
+	bottom: 0;
+	width: 115px;
+	height: 31px;
+	background: url(../img/global.png) 0 -186px no-repeat;
+}
+.q_code_layer{
+	display: none;
+	height: 286px;
+	width: 132px;
+	background-color: #fff;
+	position: absolute;
+	left: 40px;
+	border: 1px solid #019d59;
+	border-radius: 5px;
+}
+.q_code_layer .q_codeTitle{
+	display: block;
+	color: #666;
+	padding: 12px 20px;
+}
+.q_code:hover .q_code_layer{
+	display: block;
+}
+.q_codeImage{
+	display: block;
+	width: 91px;
+	height: 91px;
+	background: url(../img/global.png) no-repeat;
+	margin-left: 20px;
+}
+.q_code_layer>a:first-child .q_codeImage{
+	background-position: -414px -113px;
+}
+
+.q_code_layer>a:last-child .q_codeImage{
+	background-position: -415px -2px;
+}
+
+/***********************************************************************************内容区开始*/
 
 
+#contain{
+	width: 1220px;
+	margin:0 auto;
+}
 
+.con_top{
+	margin:20px 0;
+}
+
+.con_topLeft,.con_topCenter,.con_topRight{
+	float: left;
+}
+
+.con_topLeft{
+	width: 300px;
+	height: 409px;
+	border: 1px solid #eee;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.con_tlBox_tab{
+	height: 58px;
+	border-bottom: 2px solid #f25618;
+}
+
+.con_tlBox_tab>ul>li{
+	float: left;
+	width: 74px;
+	height: 58px;
+	border-right: 1px solid #eee;
+	cursor: pointer;
+}
+.con_tlBox_tab>ul>li>span{
+	display: block;
+	width: 34px;
+	height: 34px;
+	margin: 12px 20px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+}
+.con_tlBox_tab>ul>li:last-child{
+	border-right: 1px solid #fff;
+}
+
+.con_tlBox_tab .oning>span{
+	font-weight: bold;
+	color: #f25618;
+}
+
+.form_box{
+	padding: 15px;
+	position: relative;
+}
+#con_tlBox_b{
+	display: block;
+	width: 14px;
+	height: 6px;
+	background: url(../img/index_global.png) -260px 0 	no-repeat;
+	position: absolute;
+	top: 0;
+	left:26px;
+}
+/*********************设置表单样式*/
+.form_title>ul>li{
+	display: none;
+	color: #666;
+}
+.form_title>ul>li:first-child{
+	display: block;
+}
+.form_title>form>input{
+	width: 260px;
+	height: 35px;
+	border:1px solid #D8D8D8;
+	margin:10px 0px;
+	padding-left: 5px;
+}
+.form_title>form>input:focus{
+	border: 1px solid #f25618;
+}
+
+#sq_form>select{
+	height: 35px;
+	width: 127px;
+	margin-top: 10px;
+	border: 1px solid #D8D8D8;
+	color: #666;
+}
+#sq_form>input+select{
+	margin-right: 10px;
+}
+#check_box{
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	top: 4px;
+	left:5px;
+}
+#tk_box{
+	position: relative;
+	margin:20px 0;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 20px;
+
+}
+.tk{
+	color: #01af63;
+	text-decoration: none;
+}
