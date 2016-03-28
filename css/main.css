@@ -189,7 +189,7 @@ header{
 	background-color: #01af63;
 	color: #fff;
 	border: 0;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 16px;
 	cursor: pointer;
 }
@@ -206,31 +206,42 @@ header{
 	cursor: pointer;
 }
 /*按钮样式*/
-.lb_btn{
+.btn_box{
 	display: block;
 	position: absolute;
 	width: 7px;
 	height: 15px;
 	background: url(../img/global.png) no-repeat;
 	z-index: 5;
+}
+.lb_btn{
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	z-index: 5;
 	opacity: 0;
 }
 #btn_left{
 	top: 25px;
 	left: 8px;
+}
+#btn_left .btn_box{
 	background-position: -172px 0;
 }
 #btn_right{
-	background-position: -179px 0;
+	
 	top: 25px;
 	right: 5px;
+}
+#btn_right .btn_box{
+	background-position: -179px 0;
 }
 #head_lb:hover .lb_btn{
 	opacity: 1;
 }
 #head_lb_box{
 	position: absolute;
-	left: -230px;
 	width: 10000px;
 }
 #head_lb_box li{
@@ -393,6 +404,7 @@ dd .dd_new{
 	left: 40px;
 	border: 1px solid #019d59;
 	border-radius: 5px;
+	z-index: 5;
 }
 .q_code_layer .q_codeTitle{
 	display: block;
@@ -603,6 +615,57 @@ dd .dd_new{
 #center_lb_btn .spanBtn_hover{
 	opacity: 0.8;
 }
+
+/*左右按钮样式*/
+
+.center_lb .bleft{
+	position: absolute;
+	left:0;
+	top: 50%;
+	display: none;
+	margin-top: -25px;
+	width: 50px;
+	height:50px;
+	background-color: #000;
+	opacity: 0.5;
+}
+.center_lb .bleft span{
+	background-position: 0 0;
+}
+.center_lb .bright{
+	display: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #000;
+    opacity: 0.5;
+    top: 50%;
+    right: 0;
+    margin-top: -25px;
+    z-index: 2;
+}
+.center_lb .bright span{
+	background-position: -12px 0;
+}
+.banner_arrow{
+	display: block;
+    width: 11px;
+    height: 20px;
+    margin: 15px auto;
+    line-height: 99em;
+    overflow: hidden;
+    background: url(../img/main/banner.png) no-repeat;
+}
+
+.center_lb:hover .bright{
+	display: block;
+}
+.center_lb:hover .bleft{
+	display: block;
+}
+
+
+
 .center_tab{
 	width: 619px;
 	height: 100px;

@@ -6,17 +6,19 @@ window.onload = function () {
 	//获取select
 	var pro = document.getElementById('pro');
 	var city = document.getElementById('city');
+	//初始化省
 	for (var i = 0; i < citys.length; i++) {
 		var opt = new Option(citys[i].name,i);
 		pro.add(opt);
 		// console.log(citys[i].sub[1]);
 		// console.log(citys[i].sub[0]);
 	}	
+	//初始化区
 	opt = new Option(citys[1].sub[0].name,i);
 	city.add(opt);
 		
 			
-	
+	//加载区县
 	pro.onchange = function(){
 		var index = this.selectedIndex;
 		city.innerHTML = '';
@@ -45,61 +47,102 @@ window.onload = function () {
 		selected_box[i].onclick = selected;
 	}
 
-	//顶部中层小轮播
+
+
+
+
+
+
+
+
+//顶部中层小轮播
+	var container = document.getElementById('head_lb');
 	var btn_left = document.getElementById('btn_left');
 	var btn_right= document.getElementById('btn_right');
-	head_lb();
+	var timer ;
 
-	//设置定时器自动切图
-	var timer = null;
 	var box =document.getElementById('head_lb_box');
-	function head_lb() {
-		// body...
+	//初始化轮播left
+	box.style.left = '-230px';
+	var animated = false;
+	function animate(offset){
+		animated = true;
+		var newLeft = parseInt(box.style.left)+offset;
+		var time = 300;
+		var interval = 10;
+		var speed = offset/(time/interval);
 		
-		timer = setInterval(function () {
-			//定时向右
-			right_lb();
-			
-		},4000);
-
+		
+		function go(){
+			if ((speed<0 && parseInt(box.style.left) > newLeft)||(speed > 0 && parseInt(box.style.left)<newLeft)) {
+				box.style.left = parseInt(box.style.left)+speed+'px';
+				setTimeout(go,interval);
+			}else{
+				animated = false;
+				box.style.left = newLeft+'px';
+				if (newLeft<-690) {
+					box.style.left = -230+'px';
+				}
+				if (newLeft>-230) {
+				box.style.left = -690+'px';
+				}
+			}
+		
+		}
+		go();
 	}
-
-	// 向左
+	function play(){
+		timer = setInterval(function (){
+			btn_right.onclick();
+		},3000)
+	}
+	function stop(){
+		clearInterval(timer);
+	}
+	btn_right.onclick = function(){
+		if (!animated) {
+			animate(-230);
+		}
+		
+	}
 	
-	function left_lb(){
-		var current_left = box.style.left;
-		if (current_left+230>0) {
-			box.style.transition = 'all 1s ease';
-			console.log(getComputedStyle(box).transition);
-			current_left = -920;
-			box.style.left = current_left+'px';
-			box.style.transition = '';
-		}
-		else{
-			
-			current_left = current_left+230;
-			box.style.left = current_left+'px';
-			
+	btn_left.onclick = function(){
+		if (!animated) {
+			animate(230);
 		}
 	}
-	btn_left.onclick = left_lb;
-	//向右
-	function right_lb(){
-		var current_left = parseInt(getComputedStyle(box).left.slice(0,-2));
-		if (current_left-230<-920) {
-			console.log(getComputedStyle(box).transition);
-			current_left = -230;
-			box.style.left = current_left+'px';
-		}
 
-		if(current_left-230>=-920){
-			box.style.transition = 'all 1s ease';
-			current_left = current_left-230;
-			box.style.left = current_left+'px';
-			box.style.transition = '';
-		}
-	}	
-	btn_right.onclick = right_lb;
+	//执行自动轮播
+	play();
+	//添加启动、终止计时器事件
+	container.onmouseover = stop;
+	container.onmouseout = play;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 		// **************************banner条浮动样式设置
@@ -121,16 +164,7 @@ window.onload = function () {
 	    }  
 	}  
 
-	//为菜单设置浮动监听事件
-	// var lis = document.getElementsByClassName('has_secondMenu');
-	// for (var i = 0; i < lis.length; i++) {
-	// 	lis[i].onmouseover = function () {
-	// 		addClass(this,'menu_hover');
-	// 	}
-	// 	lis[i].onmouseout = function () {
-	// 		removeClass(this,'menu_hover');
-	// 	}
-	// }
+	
 
 	// **********************************************************************************contain开始
 
@@ -161,44 +195,68 @@ window.onload = function () {
 		}
 	}
 
-	//表单省市区见selec.js
+
 
 
 	//顶部中央轮播
-
+	var center_lb = document.getElementsByClassName('center_lb ')[0];
 	var li_imgs = document.getElementsByClassName('clb_box')[0].children;
 	var span_btns = document.getElementById('center_lb_btn').children;
 	var current_index = 0;
-	//var next_index = null;
+	var next = document.getElementsByClassName('bright')[0];
+	var prev = document.getElementsByClassName('bleft')[0];
 	function ctr_slider(index){
 		//切换图片
+		if (index>4) {
+			index = 0;
+		}else if(index<0){
+			index = 4;
+		}		
 		li_imgs[current_index].style.opacity = 0;
 		li_imgs[index].style.opacity = 1;
 		current_index = index;
+		
+
+		// 切换小按钮
 		for (var j = 0; j < span_btns.length; j++) {
 				span_btns[j].className = '';
 			}
-			//切换btn样式
 		span_btns[current_index].className='spanBtn_hover';
+
 	}
-	var timer2= setInterval(function(){
-		if (current_index==4) {
-			ctr_slider(0);
-		}else{
-			ctr_slider(parseInt(current_index)+1);
-		}
-	},6000);
-	//按钮浮动函数
+	
+	//添加小按钮浮动事件
 	function btn_slider() {
+			
 			ctr_slider(this.getAttribute('btn_index'));
+			
 		}
+			
 	for (var i = 0; i < span_btns.length; i++) {
 		span_btns[i].setAttribute('btn_index',i);
 		span_btns[i].onmouseover = btn_slider;
 		}
+	//添加左右按钮点击事件
+		next.onclick = function (){
+			ctr_slider(current_index+1);
+		}
+		prev.onclick = function (){
+			ctr_slider(current_index-1);
+		}
+	var timer2;
+	function clb_boxPlay(){
+		timer2 = setInterval(function () {
+			next.onclick();
+		},4000)
+	}
+	function clb_boxStop(){
+		clearInterval(timer2);
+	}
 
-		
-	
+	//计时器启动终止事件
+	clb_boxPlay();
+	center_lb.onmouseover = clb_boxStop;
+	center_lb.onmouseout = clb_boxPlay;
 
 }
 
