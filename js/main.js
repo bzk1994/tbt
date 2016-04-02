@@ -134,17 +134,6 @@ window.onload = function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 		// **************************banner条浮动样式设置
 	//引入添加删除指定类的方法
 
@@ -194,6 +183,21 @@ window.onload = function () {
 			input.focus();
 		}
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -257,6 +261,128 @@ window.onload = function () {
 	clb_boxPlay();
 	center_lb.onmouseover = clb_boxStop;
 	center_lb.onmouseout = clb_boxPlay;
+
+
+
+
+	//家居商城轮播
+
+
+	var sb_left = document.getElementsByClassName('btn_left')[0];
+	var sb_right = document.getElementsByClassName('btn_right')[0];
+	var sb_lis = document.getElementsByClassName('small_banner')[0].children;
+	var sb_btns = document.getElementsByClassName('sb_btns')[0].children;
+	var jjsc_lb = document.getElementsByClassName('jjscCon_slider')[0];
+	var sb_index = 0;
+
+	//设置自定义属性
+	for (var i = 0; i < sb_btns.length; i++) {
+		sb_btns[i].setAttribute('btn_index',i);
+	}
+
+
+	function sb_slider(index){
+			//切换图片
+			if (index>2) {
+				index = 0;
+			}else if(index<0){
+				index = 2;
+			}		
+			sb_lis[sb_index].style.opacity = 0;
+			sb_lis[index].style.opacity = 1;
+			sb_index = index;
+			
+
+			// 切换小按钮
+			for (var j = 0; j < sb_btns.length; j++) {
+					sb_btns[j].className = '';
+				}
+			sb_btns[sb_index].className='spanBtn_hover';
+
+		}
+
+
+	//添加小按钮浮动事件
+		function sb_btn_slider() {
+				
+				sb_slider(this.getAttribute('btn_index'));
+				
+			}
+				
+		for (var i = 0; i < sb_btns.length; i++) {
+			sb_btns[i].setAttribute('btn_index',i);
+			sb_btns[i].onmouseover = sb_btn_slider;
+			}
+		//添加左右按钮点击事件
+			sb_right.onclick = function (){
+				sb_slider(sb_index+1);
+			}
+			sb_left.onclick = function (){
+				sb_slider(sb_index-1);
+			}
+		var timer3;
+		function sb_boxPlay(){
+			timer3 = setInterval(function () {
+				sb_right.onclick();
+			},4000)
+		}
+		function sb_boxStop(){
+			clearInterval(timer3);
+		}
+
+		//计时器启动终止事件
+		sb_boxPlay();
+		jjsc_lb.onmouseover = sb_boxStop;
+		jjsc_lb.onmouseout = sb_boxPlay;
+
+
+
+
+
+
+
+
+
+		//土巴兔装修帮banner
+
+		var zxb1 = document.getElementsByClassName('zxb1')[0];
+		var zxb2 = document.getElementsByClassName('zxb2')[0];
+		var zxb3 = document.getElementsByClassName('zxb3')[0];
+
+		zxb1.onmouseover = function (){
+			zxb2.style.left = 536+'px';
+			zxb3.style.left = 728+'px';
+		}
+		zxb2.onmouseover = function (){
+			zxb2.style.left = 192+'px';
+			zxb3.style.left = 728+'px';
+		}
+		zxb3.onmouseover = function (){
+			zxb2.style.left = 192+'px';
+			zxb3.style.left = 384+'px';
+		}
+
+		//排名
+
+		var pm1 = document.getElementById('pm1');
+		var pm2 = document.getElementById('pm2');
+		var pm1_bd = document.getElementsByClassName('pm1_bd')[0];
+		var pm2_bd = document.getElementsByClassName('pm2_bd')[0];
+		function pm_slider(){
+			if (this==pm1) {
+				pm1.className = 'pm_on';
+				pm2.className = '';
+				pm1_bd.style.display = 'block';
+				pm2_bd.style.display = 'none';
+			}else{
+				pm2.className = 'pm_on';
+				pm1.className = '';
+				pm2_bd.style.display = 'block';
+				pm1_bd.style.display = 'none';
+			}
+		}
+		pm1.onmouseover = pm_slider;
+		pm2.onmouseover = pm_slider;
 
 }
 
