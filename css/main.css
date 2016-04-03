@@ -1581,7 +1581,7 @@ dd .dd_new{
 	position: absolute;
 	height:20px;
 	width:150px;
-	top:7px;
+	top:3px;
 	line-height:20px;
 	font-size:15px;
 }
@@ -1606,4 +1606,551 @@ dd .dd_new{
 .index_ad>a:first-child{
 	display: inline-block;
 	margin-right:15px;
+}
+
+
+
+
+
+/*********************************************************************************装修公司*/
+.zxgs_title{
+	margin-bottom: 20px;
+}
+.zxgs_tit{
+	color:#01AF63;
+	font-size:24px;
+}
+
+.zxgs_left{
+	float:left;
+	width:920px;
+	height:480px;
+}
+
+
+
+.zxgs_list{
+
+}
+
+.zxgs_list li{
+	float:left;
+	width:152px;
+	height:62px;
+	border-left:1px solid #eee;
+	border-top:1px solid #eee;
+	position:relative;
+}
+
+.zxgs_list li>a{
+	display:block;
+	position:absolute;
+	width:152px;
+	height:62px;
+}
+
+.zxgs_list li>a>img{
+	display: block;
+	width:130px;
+	height: 53px;
+	margin:4px auto 0;
+}
+
+.zxgs_list .zxgs_on{
+	border:2px solid #01AF63;
+	width:149px;
+	height:59px;
+}
+.zxgs_dec1,.zxgs_dec2,.zxgs_dec3{
+	display:block;
+	width:917px;
+	height:350px;
+	border: 1px solid #eee;
+	border-right: none;
+	color:#333;
+	background-color: #F8F8F8;
+}
+.zxgs_yy{
+	float: left;
+	margin:30px;
+}
+.zxgs_msg{
+	float:left;
+	width:700px;
+	
+}
+.yy_btn{
+	display: block;
+	width:108px;
+	height: 30px;
+	font-size: 14px;
+	margin-left: 30px;
+	margin-top: 20px;
+	color:#fff;
+	background-color: #F25717;
+	line-height: 30px;
+	text-align:center;
+
+}
+.zxgs_yy>em{
+	color: #333;
+	font-style: normal;
+	padding-left: 40px;
+	padding-top: 10px;
+}
+.zxgs_yy>em>span{
+	color:#F25717;
+	padding:0 3px;
+}
+
+.zxgs_name,.zxgs_kbz,.zxgs_zs{
+	float:left;
+}
+
+.zxgs_name{
+	width:500px;
+	height:100px;
+	margin-top: 20px;
+	border-right: 1px dotted #e6e6e6;
+}
+.zxgs_kbz{
+	width:196px;
+	height:120px;
+	position: relative;
+}
+.zxgs_name>h3{
+	font-size: 24px;
+	font-weight: normal;
+	color:#666;
+	margin-bottom: 15px;
+	width:150px;
+}
+.zxgs_name>h3:hover{
+	color: #f25618;
+
+}
+
+.zxgs_level{
+	height:16px;
+	line-height: 14px;
+	overflow: hidden;
+	font-size: 16px;
+	color:#666;
+}
+.zxgs_level i{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../img/zgs_global.png) no-repeat;
+	margin-right: 3px;
+}
+.zxgs_level .ico_level1{
+	background-position: -172px -1px;
+}
+.zxgs_level .ico_level2{
+	background-position: -17px -123px;
+}
+.zxgs_level .ico_level3{
+	background-position: -68px -123px;
+}
+.zxgs_level .ico_level4{
+	background-position: -151px -1px;
+}
+.zxgs_level .ico_level5{
+	background-position: -151px -18px;
+}
+.zxgs_level .ico_level6{
+	background-position: -172px -18px;
+}
+.zxgs_level .ico_level7{
+	background-position: -192px -18px;
+}
+.zxgs_level em{
+	font-style: normal;
+	color: #666;
+	display: inline-block;
+}
+.zxgs_level a{
+
+}
+
+.zxgs_add{
+	margin-top: 15px;
+}
+.zxgs_add>i{
+	display: inline-block;
+	width:10px;
+	height: 13px;
+	background: url(../img/zgs_index.png) -43px -10px;
+}
+
+.zxgs_kbz>em{
+	color:#666;
+	font-size: 16px;
+	position: absolute;
+	font-style: normal;
+	top: 30%;
+	left:30%;
+}
+.zxgs_kbz>span{
+	color: #f25618;
+	font-size: 24px;
+	position: absolute;
+	top:45%;
+	left:32%;
+}
+
+.zxgs_zs{
+	border-top: 1px dotted #e8e8e8;
+	margin-top: 15px;
+	padding-top:20px;
+	color: #666;
+	line-height: 18px;
+}
+.zxgs_zs .more{
+	color:#01AF63;
+}
+.zxgs_zs .more:hover{
+	color: #f25618;
+}
+.zxgs_zs>ul>li{
+	float:left;
+	position: relative;
+	margin-top: 10px;
+	margin-right: 18px;
+}
+.zxgs_zs>ul>li>img{
+	width:150px;
+	height: 105px;
+}
+.zs_ban{
+	position: absolute;
+	height:30px;
+	width: 100%;
+	background: #000;
+	opacity: 0.8;
+	bottom: 4px;
+}
+
+.zxgs_zs>ul>li>span{
+	display: block;
+	position: absolute;
+	bottom:10px;
+	width: 100px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #fff;
+	padding-left:10px;
+}
+.zxgs_zs>ul>li>i{
+	display: block;
+	position: absolute;
+	color: #999;
+	bottom: 10px;
+	right:5px;
+	font-style: normal;
+}
+
+.zxgs_right{
+	width: 255px;
+	height:329px;
+	padding: 10px 21px;
+	border: 1px solid #eee;
+	float:left;
+}
+.gs_title>p{
+	float:left;
+	font-size: 20px;
+	width:120px;
+	padding: 10px 0px;
+	cursor: pointer;
+	border-bottom:2px solid #eee;
+	text-align: center;
+}
+.gs_title>.pm_on{
+	color:#01af63;
+	border-bottom:2px solid #01af63;
+}
+.gs1_bd{
+	display: none;
+}
+.gs1_bd>p{
+	margin:10px 0 15px;
+}
+.ico_ibox{
+	width:100%;
+	height:50px;
+}
+.ico_ibox>li{
+	float:left;
+	width:40px;
+	height:60px;
+	text-align: center;
+}
+.ico_ibox>.ico_right{
+	width:10px;
+	margin:0 10px;
+}
+.ico_right>em{
+	display: block;
+	height:20px;
+	background: url(../img/index_global.png) -93px -42px no-repeat;
+}
+.ico_ibox i{
+	margin: 0 auto;
+	display: block;
+	background: url(../img/index_global.png) no-repeat;
+}
+.ico_ibox .ico_i1{
+	width:31px;
+	height:32px;
+	background-position: -142px 0;
+}
+.ico_ibox .ico_i2{
+	width:28px;
+	height:32px;
+	background-position: -174px 0;
+}
+.ico_ibox .ico_i3{
+	width:31px;
+	height:32px;
+	background-position: -203px 0;
+}
+.ico_ibox .ico_i4{
+	width:28px;
+	height:32px;
+	background-position: -234px 0;
+}
+
+
+/*************登记表单*************/
+.gs_form_box{
+	margin-top: 80px;
+	padding: 15px 0;
+	position: relative;
+	border-top:1px dotted #eee;
+}
+#gs_btn{
+	display: block;
+	width: 252px;
+	height:45px;
+	background-color: #f25618;;
+	line-height: 45px;
+	text-align: center;
+	margin-top: 20px;
+	cursor: pointer;
+}
+#gs_btn a{
+	color: #fff;
+	font-size: 14px;
+}
+#gs_form>input{
+	width:246px;
+}
+#gs_form>select{
+	height: 35px;
+	width: 120px;
+	margin-top: 10px;
+	border: 1px solid #D8D8D8;
+	color: #666;
+}
+#gs_form>#gs_pro{
+	margin-right: 10px;
+}
+
+.form_title>p{
+	color:#f25618;
+	font-size:15px;
+}
+
+
+/******************************最新签约公司*/
+
+.gs2_bd>ul>li{
+	height: 56px;
+    width: 250px;
+    padding: 21px 0;
+    line-height: 56px;
+    border-bottom:1px dotted #eee;
+}
+.gs2_bd>ul>li>a,.gs2_bd>ul>li>div{
+	float: left;
+}
+
+.gs2_bd>ul>li>a{
+	display: block;
+	height: 55px;
+	width:52px;
+	border: 2px solid #eee;
+}
+.gs2_bd>ul>li>a>img{
+	width:52px;
+	height: 52px;
+}
+
+.credit_box>h6{
+	display: block;
+	width: 140px;
+	height:20px;
+	margin-top:3px;
+	font-style:normal;
+	font-weight: normal;
+	color:#999;
+}
+.credit_box>h6:last-child{
+	margin-top: -3px;
+}
+
+
+/****************************************************************************************************小区案例*/
+
+.xqal_left{
+	float:left;
+	width:880px;
+	height:300px;
+	margin-right: 40px;
+}
+.xqal_right{
+	float: left;
+	width: 299px;
+}
+
+.xqal_left .index_title>em{
+	position:absolute;
+	right: 0;
+	bottom: 0;
+	font-style:normal;
+}
+.xqal_left .index_title>em:hover{
+	color: #f25618;
+}
+
+.xqal_list{
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #eee;
+}
+.xqal_list>li{
+	float: left;
+	margin-right: 10px;
+	position: relative;
+}
+.xqal_list>li>a>img{
+	width:280px;
+	height:280px;
+}
+.xqal_ban{
+	height: 30px;
+	width:100%;
+	position: absolute;
+	bottom:3px;
+	background-color: #000;
+	opacity: 0.8;
+}
+
+.xqal_list>li span{
+	display: block;
+	position: absolute;
+	bottom: 8px;
+	color:#fff;
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+.xqal_right .gs_bd a{
+	border: none;
+	border-radius: 50%;
+	overflow: hidden;
+	height: 52px;
+}
+
+.xqal_right .gs_bd h6{
+	margin-top: 10px;
+}
+
+.xqal_right .gs2_bd li{
+	padding:8px 0;
+}
+
+
+/*************************************************************热点新闻*/
+
+.rdxw_bd{
+	border-top: 1px solid #eee;
+}
+.xw_img,.xw_list,.xw_right{
+	float: left;
+}
+.xw_img{
+	display: block;
+	width: 411px;
+    height: 347px;
+    position: relative;
+}
+.xw_list{
+	width: 431px;
+    height: 331px;
+	padding:20px 38px;
+}
+.xw_right{
+	width: 299px;
+	height:347px;
+	border: 1px solid #eee;
+}
+.new1{
+	position: absolute;
+	right: 0;	
+}
+.new2{
+	position: absolute;
+	top:50px;
+	left:0;
+}
+
+.xw_list>li{
+	padding: 22px 0;
+	border-bottom: 1px dotted #eee;
+}
+.xw_list h4{
+	font-size:16px;
+	color: #666;
+	font-weight: normal;
+}
+.xw_list h4:hover{
+	color:#f25618;
+}
+.xw_list p{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color:#999;
+	width:431px;
+	line-height: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer{
+	width: 100%;
+	height: 800px;
 }

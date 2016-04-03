@@ -33,6 +33,38 @@ window.onload = function () {
 		}
 	}
 
+
+
+	//装修公司表单初始化
+	var gs_pro = document.getElementById('gs_pro');
+	var gs_city = document.getElementById('gs_city');
+	//初始化省
+	for (var i = 0; i < citys.length; i++) {
+		var opt = new Option(citys[i].name,i);
+		gs_pro.add(opt);
+		// console.log(citys[i].sub[1]);
+		// console.log(citys[i].sub[0]);
+	}	
+	//初始化区
+	opt = new Option(citys[1].sub[0].name,i);
+	gs_city.add(opt);
+		
+			
+	//加载区县
+	gs_pro.onchange = function(){
+		var index = this.selectedIndex;
+		gs_city.innerHTML = '';
+		if (citys[index].sub) {
+			for (var i = 0; i < citys[index].sub.length; i++) {
+				var opt = new Option(citys[index].sub[i].name,i);
+				gs_city.add(opt);
+			}
+		}else{
+			var opt = new Option(citys[1].sub[0].name);
+			gs_city.add(opt);
+		}
+	}
+
 		//搜索框selecte
 	var selected_index = 1;
 	var selected_box = document.getElementsByClassName('select_box')[0].children;
@@ -383,6 +415,30 @@ window.onload = function () {
 		}
 		pm1.onmouseover = pm_slider;
 		pm2.onmouseover = pm_slider;
+
+
+
+		//帮我找公司
+		var gs1 = document.getElementById('gs1');
+		var gs2 = document.getElementById('gs2');
+		var gs1_bd = document.getElementsByClassName('gs1_bd')[0];
+		var gs2_bd = document.getElementsByClassName('gs2_bd')[0];
+		function gs_slider(){
+			
+			if (this==gs1) {
+				gs1.className = 'pm_on';
+				gs2.className = '';
+				gs1_bd.style.display = 'block';
+				gs2_bd.style.display = 'none';
+			}else{
+				gs2.className = 'pm_on';
+				gs1.className = '';
+				gs2_bd.style.display = 'block';
+				gs1_bd.style.display = 'none';
+			}
+		}
+		gs1.onmouseover = gs_slider;
+		gs2.onmouseover = gs_slider;
 
 }
 
