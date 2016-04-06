@@ -440,5 +440,93 @@ window.onload = function () {
 		gs1.onmouseover = gs_slider;
 		gs2.onmouseover = gs_slider;
 
+
+
+		//热点新闻
+		var xw1 = document.getElementById('xw1');
+		var xw2 = document.getElementById('xw2');
+		var xw1_bd = document.getElementsByClassName('xw1_bd')[0];
+		var xw2_bd = document.getElementsByClassName('xw2_bd')[0];
+		function xw_slider(){
+			
+			if (this==xw1) {
+				xw1.className = 'pm_on';
+				xw2.className = '';
+				xw1_bd.style.display = 'block';
+				xw2_bd.style.display = 'none';
+			}else{
+				xw2.className = 'pm_on';
+				xw1.className = '';
+				xw2_bd.style.display = 'block';
+				xw1_bd.style.display = 'none';
+			}
+		}
+		xw1.onmouseover = xw_slider;
+		xw2.onmouseover = xw_slider;
+
+
+		//友情链接
+		var tab_box = document.getElementsByClassName('tab_box')[0].children;
+		var lj_box = document.getElementsByClassName('ftcl_content');
+		
+		for (var i = 0; i < tab_box.length; i++) {
+			tab_box[i].setAttribute('index',i);
+			tab_box[i].onclick = function(){
+				//切换tab
+				for (var j = 0; j < tab_box.length; j++) {
+					removeClass(tab_box[j],'ftcl_tab_on');
+				}
+				addClass(this,'ftcl_tab_on');
+
+				//切换链接块
+				for (var k = 0; k< lj_box.length; k++) {
+					removeClass(lj_box[k],'ftcl_on');
+				}
+				addClass(lj_box[this.getAttribute('index')],'ftcl_on');
+			}
+		}
+
+
+		//左侧关注我们 二维码显示
+
+		var slide_gz = document.getElementsByClassName('slide_gz')[0];
+		var two_wm = document.getElementsByClassName('two_wm')[0];
+		slide_gz.onmouseover = function(){
+			addClass(two_wm,'open');
+		}
+		slide_gz.onmouseout = function(){
+			removeClass(two_wm,'open');
+		}
+
+
+		//回到顶部按钮
+
+		var obtn = document.getElementsByClassName('slide_top')[0];
+			var timer_top = null;
+			//获取可视区域的高度
+			var clientHeight = document.documentElement.clientHeight;
+			window.onscroll = function(){
+				var osTop = document.body.scrollTop;
+				if(osTop>=clientHeight){
+					obtn.style.display = 'block';
+				}else{
+					obtn.style.display = 'none';
+				}
+			}
+			obtn.onclick = function(){
+				//设置定时器
+				timer_top = setInterval(function(){
+					//获取滚动条距离顶部的高度
+					var osTop = document.body.scrollTop;
+					var ispeed = (osTop/6);
+					document.body.scrollTop = osTop-ispeed;
+					//console.log(osTop-ispeed);
+					if (osTop==0)
+					{
+						clearInterval(timer_top);
+					}
+				},30)
+				
+			}
 }
 
