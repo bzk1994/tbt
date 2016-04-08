@@ -553,7 +553,7 @@ dd .dd_new{
 
 #sq_btn{
 	display: block;
-	width: 280px;
+	width: 268px;
 	height:45px;
 	background-color: #f25618;;
 	line-height: 45px;
@@ -1897,7 +1897,7 @@ dd .dd_new{
 
 .zxgs_right{
 	width: 255px;
-	height:329px;
+	height:457px;
 	padding: 10px 21px;
 	border: 1px solid #eee;
 	float:left;
@@ -2426,9 +2426,10 @@ dd .dd_new{
 	margin-left:8px;
 }
 
-.fb_img{
+.fb_con .fb_img{
 	height:70px;
 	text-align: center;
+	margin-bottom: 0;
 }
 .fb_img>span{
 	display: inline-block;
@@ -2531,4 +2532,144 @@ dd .dd_new{
 .slide_help .open{
 	width:118px;
 	right:60px;
+}
+
+
+.slide_box_con{
+	position: fixed;
+	z-index: 100;
+	left:-150%;
+	bottom:0;
+	width:100%;
+	height:160px;
+	background: rgba(2,2,2,0.7);
+	transition:all 1.5s ease;
+}
+.slide_box{
+	position: relative;
+	width:100%;
+	height:100%;
+}
+.slide_box1{
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:3;
+}
+.slide_ban{
+	width:1220px;
+	height:160px;
+	margin: 0 auto;
+	position: relative;
+}
+.dy_img{
+	float:left;
+	position: relative;
+	width:522px;
+	height:181px;
+}
+.dy_img>img{
+	position:absolute;
+	bottom:21px;
+	left:60px;
+}
+
+.dy_img>em{
+	position:absolute;
+	bottom:25px;
+	left:137px;
+	color:#666;
+	font-style: normal;
+}
+
+.step1{
+	width:320px;
+	height:100%;
+	float:left;
+	background:#1c2837;
+	padding:15px 10px;
+	margin-left:115px;
+}
+.step_title{
+	margin-bottom:20px;
+	font-size:16px;
+	font-weight: 500;
+	color:#fff;
+}
+.step_title>span{
+	color:#ffa00b;
+}
+.step1 input,.step1 select,.setp1 button{
+	border:none;
+
+}
+
+.step1 input{
+	width:180px;
+	height:30px;
+	padding-left:30px;	
+}
+.step1 .mt select{
+	width:100px;
+	height:30px;
+}
+
+.element{
+	margin-top:10px;
+}
+.mb select{
+	width:103px;
+	height:30px;
+
+}
+.mb button{
+	width:100px;
+	height:30px;
+	background: #ffa00b;
+	color:#fff;
+	text-align:center;
+	border:none;
+}
+
+
+
+.zxbj_wm{
+	float:left;
+	width:106px;
+	position:relative;
+	margin-left:30px;
+	margin-top:10px;
+}
+.zxbj_wm p{
+	margin:10px 0;
+	color:#fff;
+	text-align: center;
+}
+
+.zxbj_wm div{
+	height:106px;
+	background: url(../img/global.png) -407px -106px no-repeat;
+}
+
+.zxbj_wm em{
+	width:20px;
+	height:18px;
+	position:absolute;
+	right:-70px;
+	top:10px;
+	cursor:pointer;
+	background: url(../img/global.png) -253px -282px no-repeat;
+}
+
+#open{
+	width:156px;
+	height: 165px;
+	position:fixed;
+	z-index: 100;
+	transition: all 1.5s ease;
+	bottom:70px;
+	left:-40px;
+	display: none;
+	background: url(../img/open.png) no-repeat;
+	cursor:pointer;
 }

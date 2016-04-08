@@ -7,63 +7,45 @@ window.onload = function () {
 	var pro = document.getElementById('pro');
 	var city = document.getElementById('city');
 	//初始化省
-	for (var i = 0; i < citys.length; i++) {
+	function pro_city(pro,city){
+		for (var i = 0; i < citys.length; i++) {
 		var opt = new Option(citys[i].name,i);
 		pro.add(opt);
 		// console.log(citys[i].sub[1]);
 		// console.log(citys[i].sub[0]);
-	}	
-	//初始化区
-	opt = new Option(citys[1].sub[0].name,i);
-	city.add(opt);
-		
+		}	
+		//初始化区
+		opt = new Option(citys[1].sub[0].name,i);
+		city.add(opt);
 			
-	//加载区县
-	pro.onchange = function(){
-		var index = this.selectedIndex;
-		city.innerHTML = '';
-		if (citys[index].sub) {
-			for (var i = 0; i < citys[index].sub.length; i++) {
-				var opt = new Option(citys[index].sub[i].name,i);
+				
+		//加载区县
+		pro.onchange = function(){
+			var index = this.selectedIndex;
+			city.innerHTML = '';
+			if (citys[index].sub) {
+				for (var i = 0; i < citys[index].sub.length; i++) {
+					var opt = new Option(citys[index].sub[i].name,i);
+					city.add(opt);
+				}
+			}else{
+				var opt = new Option(citys[1].sub[0].name);
 				city.add(opt);
 			}
-		}else{
-			var opt = new Option(citys[1].sub[0].name);
-			city.add(opt);
 		}
 	}
-
+	pro_city(pro,city);
 
 
 	//装修公司表单初始化
 	var gs_pro = document.getElementById('gs_pro');
 	var gs_city = document.getElementById('gs_city');
-	//初始化省
-	for (var i = 0; i < citys.length; i++) {
-		var opt = new Option(citys[i].name,i);
-		gs_pro.add(opt);
-		// console.log(citys[i].sub[1]);
-		// console.log(citys[i].sub[0]);
-	}	
-	//初始化区
-	opt = new Option(citys[1].sub[0].name,i);
-	gs_city.add(opt);
-		
-			
-	//加载区县
-	gs_pro.onchange = function(){
-		var index = this.selectedIndex;
-		gs_city.innerHTML = '';
-		if (citys[index].sub) {
-			for (var i = 0; i < citys[index].sub.length; i++) {
-				var opt = new Option(citys[index].sub[i].name,i);
-				gs_city.add(opt);
-			}
-		}else{
-			var opt = new Option(citys[1].sub[0].name);
-			gs_city.add(opt);
-		}
-	}
+	pro_city(gs_pro,gs_city);
+
+
+
+
+
 
 		//搜索框selecte
 	var selected_index = 1;
@@ -509,8 +491,11 @@ window.onload = function () {
 				var osTop = document.body.scrollTop;
 				if(osTop>=clientHeight){
 					obtn.style.display = 'block';
+					$('#open').css('display','block');
 				}else{
 					obtn.style.display = 'none';
+					$('#open').css('display','none');
+
 				}
 			}
 			obtn.onclick = function(){
@@ -528,5 +513,20 @@ window.onload = function () {
 				},30)
 				
 			}
+
+			//底部固定透视banner
+			var $slide_ban = $(".slide_box_con");
+			$('#close').click(function(){
+				$slide_ban.css('left','-150%');
+				$('#open').css('left','-40px');
+			})
+			$('#open').click(function (){
+				$slide_ban.css('left','0');
+				$('#open').css('left','-200px');
+			})
+
+			pro_city($('#zxbj_pro')[0],$('#zxbj_city')[0]);
+
 }
+
 
