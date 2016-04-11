@@ -2335,6 +2335,7 @@ dd .dd_new{
 
 .ftc_center li{
 	margin-top: 10px;
+	cursor: pointer;
 }
 .ftc_center li:nth-child(1):hover{
 	color:#d6332a;

@@ -1,4 +1,4 @@
-window.onload = function () {
+$(function(){
 	console.log(2);
 	//var pro = ["北京市","天津市","河北省","山西省","内蒙古","辽宁省","吉林省","黑龙江省","上海市","江苏省","浙江省","安徽省","福建省","江西省","山东省","河南省","湖北省","湖南省","广东省","广西自治区","海南省"," 重庆市","四川省","贵州省","云南省","西藏自治区","陕西省","甘肃省","青海省","宁夏回族自治区","新疆维吾尔自治区","香港特别行政区","澳门特别行政区","台湾省","其它"]);
 	var citys = new Array;
@@ -148,24 +148,8 @@ window.onload = function () {
 
 
 
-		// **************************banner条浮动样式设置
-	//引入添加删除指定类的方法
-
-	//hasClass:判断样式是否存在
-	function hasClass(obj, cls) {  
-	    return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));  
-	}  
-	//addClass:为指定的dom元素添加样式
-	function addClass(obj, cls) {  
-    if (!hasClass(obj, cls)) obj.className += " " + cls;  
-	}  
-	//removeClass:删除指定dom元素的样式 
-	function removeClass(obj, cls) {  
-	    if (hasClass(obj, cls)) {  
-	        var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');  
-	        obj.className = obj.className.replace(reg, ' ');  
-	    }  
-	}  
+	
+	
 
 	
 
@@ -182,9 +166,9 @@ window.onload = function () {
 		lis[i].setAttribute('index',i);
 		lis[i].onclick = function(){
 			for (var j = 0; j < lis.length; j++) {
-				removeClass(lis[j],'oning');
+				$(lis[j]).removeClass('oning');
 			}
-			addClass(this,'oning');
+			$(this).addClass('oning');
 			var index = this.getAttribute('index');
 			b.style.left = (26+index*75)+'px';
 			//获得表单title
@@ -447,38 +431,39 @@ window.onload = function () {
 		xw2.onmouseover = xw_slider;
 
 
-		//友情链接
-		var tab_box = document.getElementsByClassName('tab_box')[0].children;
-		var lj_box = document.getElementsByClassName('ftcl_content');
 		
-		for (var i = 0; i < tab_box.length; i++) {
-			tab_box[i].setAttribute('index',i);
-			tab_box[i].onclick = function(){
-				//切换tab
-				for (var j = 0; j < tab_box.length; j++) {
-					removeClass(tab_box[j],'ftcl_tab_on');
-				}
-				addClass(this,'ftcl_tab_on');
-
-				//切换链接块
-				for (var k = 0; k< lj_box.length; k++) {
-					removeClass(lj_box[k],'ftcl_on');
-				}
-				addClass(lj_box[this.getAttribute('index')],'ftcl_on');
+	//友情链接
+	var tab_box = document.getElementsByClassName('tab_box')[0].children;
+	var lj_box = document.getElementsByClassName('ftcl_content');
+	
+	for (var i = 0; i < tab_box.length; i++) {
+		tab_box[i].setAttribute('index',i);
+		tab_box[i].onclick = function(){
+			//切换tab
+			for (var j = 0; j < tab_box.length; j++) {
+				$(tab_box[j]).removeClass('ftcl_tab_on');
 			}
+			$(this).addClass('ftcl_tab_on');
+
+			//切换链接块
+			for (var k = 0; k< lj_box.length; k++) {
+				$(lj_box[k]).removeClass('ftcl_on');
+			}
+			$(lj_box[this.getAttribute('index')]).addClass('ftcl_on');
 		}
+	}
 
 
-		//左侧关注我们 二维码显示
+		//右侧关注我们 二维码显示
 
-		var slide_gz = document.getElementsByClassName('slide_gz')[0];
-		var two_wm = document.getElementsByClassName('two_wm')[0];
-		slide_gz.onmouseover = function(){
-			addClass(two_wm,'open');
-		}
-		slide_gz.onmouseout = function(){
-			removeClass(two_wm,'open');
-		}
+	var slide_gz = document.getElementsByClassName('slide_gz')[0];
+	var two_wm = document.getElementsByClassName('two_wm')[0];
+	slide_gz.onmouseover = function(){
+		$(two_wm).addClass('open');
+	}
+	slide_gz.onmouseout = function(){
+		$(two_wm).removeClass('open');
+	}
 
 
 		//回到顶部按钮
@@ -527,6 +512,6 @@ window.onload = function () {
 
 			pro_city($('#zxbj_pro')[0],$('#zxbj_city')[0]);
 
-}
+});
 
 
