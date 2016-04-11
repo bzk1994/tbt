@@ -60,7 +60,7 @@ header{
 	top: 11px;
 	width: 10px;
 	height: 15px;
-	background: url(../img/global.png) 0 0px  no-repeat;
+	background: url(../img/main/global.png) 0 0px  no-repeat;
 	
 }
 
@@ -107,7 +107,7 @@ header{
 	display: block;
 	width: 320px;
 	height: 65px;
-	background: url(../img/global.png) 0 -348px no-repeat;
+	background: url(../img/main/global.png) 0 -348px no-repeat;
 	margin-top:25px;
 	float: left;
 }
@@ -141,10 +141,10 @@ header{
 	display: inline-block;
 	width: 7px;
 	height: 5px;
-	background: url(../img/global.png) -70px 0 no-repeat;
+	background: url(../img/main/global.png) -70px 0 no-repeat;
 }
 .head_select:hover #selected>b{
-	background: url(../img/global.png) -91px 0 no-repeat;
+	background: url(../img/main/global.png) -91px 0 no-repeat;
 }
 
 .head_select:hover .select_box{
@@ -211,7 +211,7 @@ header{
 	position: absolute;
 	width: 7px;
 	height: 15px;
-	background: url(../img/global.png) no-repeat;
+	background: url(../img/main/global.png) no-repeat;
 	z-index: 5;
 }
 .lb_btn{
@@ -330,7 +330,7 @@ header{
 	height: 4px;
 	right: 20px;
 	top: 20px;
-	background: url(../img/global.png) no-repeat;
+	background: url(../img/main/global.png) no-repeat;
 	background-position: -77px 0;
 }
 
@@ -361,7 +361,7 @@ dd .dd_new{
 	display: inline-block;
 	width: 20px;
 	height: 11px;
-	background: url(../img/global.png) -200px -15px no-repeat;
+	background: url(../img/main/global.png) -200px -15px no-repeat;
 	margin-bottom: 5px;
 }
 .has_secondMenu:hover em{
@@ -384,7 +384,7 @@ dd .dd_new{
 	display: inline-block;
 	width: 25px;
 	height: 16px;
-	background: url(../img/global.png) -175px -15px no-repeat;
+	background: url(../img/main/global.png) -175px -15px no-repeat;
 }
 
 /*********手机APP推广*/
@@ -394,7 +394,7 @@ dd .dd_new{
 	bottom: 0;
 	width: 115px;
 	height: 31px;
-	background: url(../img/global.png) 0 -186px no-repeat;
+	background: url(../img/main/global.png) 0 -186px no-repeat;
 }
 .q_code_layer{
 	display: none;
@@ -419,7 +419,7 @@ dd .dd_new{
 	display: block;
 	width: 91px;
 	height: 91px;
-	background: url(../img/global.png) no-repeat;
+	background: url(../img/main/global.png) no-repeat;
 	margin-left: 20px;
 }
 .q_code_layer>a:first-child .q_codeImage{
@@ -497,7 +497,7 @@ dd .dd_new{
 	display: block;
 	width: 14px;
 	height: 6px;
-	background: url(../img/index_global.png) -260px 0 	no-repeat;
+	background: url(../img/main/index_global.png) -260px 0 	no-repeat;
 	position: absolute;
 	top: 0;
 	left:26px;
@@ -703,7 +703,7 @@ dd .dd_new{
 	display: block;
 	width: 130px;
 	height: 27px;
-	background: url(../img/index_global.png)-40px -67px;
+	background: url(../img/main/index_global.png)-40px -67px;
 }
 .yzfk em{
     position: absolute;
@@ -736,7 +736,7 @@ dd .dd_new{
 	display: block;
 	width: 130px;
 	height: 27px;
-	background: url(../img/index_global.png)-40px -96px;
+	background: url(../img/main/index_global.png)-40px -96px;
 }
 
 .gdzm:hover i{
@@ -872,7 +872,7 @@ dd .dd_new{
 	display: block;
 	width: 39px;
 	height: 37px;
-	background:url(../img/index_global.png) no-repeat;
+	background:url(../img/main/index_global.png) no-repeat;
 	position: absolute;
 	left:37px;
 	top: 30px; 
@@ -1084,7 +1084,7 @@ dd .dd_new{
 	display: block;
 	width: 60px;
 	height: 60px;
-	background: url(../img/index_global.png) -41px -203px no-repeat;
+	background: url(../img/main/index_global.png) -41px -203px no-repeat;
 }
 .diary_tit em{
 	position: absolute;
@@ -1092,7 +1092,7 @@ dd .dd_new{
     top: 23px;
 	width: 12px;
 	height: 20px;
-	background: url(../img/index_global.png) -117px -15px no-repeat;
+	background: url(../img/main/index_global.png) -117px -15px no-repeat;
 }
 
 .diary_list{
@@ -1160,7 +1160,7 @@ dd .dd_new{
 	display: block;
 	width: 60px;
 	height: 60px;
-	background: url(../img/index_global.png) -41px -203px no-repeat;
+	background: url(../img/main/index_global.png) -41px -203px no-repeat;
 }
 .zxgl_learn em{
 	position: absolute;
@@ -1168,7 +1168,7 @@ dd .dd_new{
     top: 23px;
 	width: 12px;
 	height: 20px;
-	background: url(../img/index_global.png) -117px -15px no-repeat;
+	background: url(../img/main/index_global.png) -117px -15px no-repeat;
 }
 .learn_list{
 	width: 1040px;
@@ -1211,7 +1211,7 @@ dd .dd_new{
 	width: 5px;
 	height: 5px;
 	margin-right: 5px;
-	background: url(../img/index_global.png) -99px 0 no-repeat;
+	background: url(../img/main/index_global.png) -99px 0 no-repeat;
 }
 
 /************************************************************************家具商城*/
@@ -1408,7 +1408,7 @@ dd .dd_new{
 .jjscCon_right em{
 	width:60px;
 	height: 30px;
-	background: url(../img/global1.png) -59px -64px no-repeat;
+	background: url(../img/main/global1.png) -59px -64px no-repeat;
 	position: absolute;
 	top: 0;
 	left:10px;
@@ -1539,7 +1539,7 @@ dd .dd_new{
 	position: absolute;
 	width:11px;
 	height:21px;
-	background: url(../img/index_global.png) -117px -14px no-repeat;
+	background: url(../img/main/index_global.png) -117px -14px no-repeat;
 	left:-11px;
 	bottom: 43%;
 }
@@ -1558,7 +1558,7 @@ dd .dd_new{
 	display: inline-block;
 	width:12px;
 	height:12px;
-	background: url(../img/index_global.png) no-repeat;
+	background: url(../img/main/index_global.png) no-repeat;
 	margin-right:10px;
 }
 .bot1>.zxb_bd_content>ul>li:first-child>i{
@@ -1784,7 +1784,7 @@ dd .dd_new{
 	display: inline-block;
 	width: 16px;
 	height: 16px;
-	background: url(../img/zgs_global.png) no-repeat;
+	background: url(../img/main/zgs_global.png) no-repeat;
 	margin-right: 3px;
 }
 .zxgs_level .ico_level1{
@@ -1824,7 +1824,7 @@ dd .dd_new{
 	display: inline-block;
 	width:10px;
 	height: 13px;
-	background: url(../img/zgs_index.png) -43px -10px;
+	background: url(../img/main/zgs_index.png) -43px -10px;
 }
 
 .zxgs_kbz>em{
@@ -1938,12 +1938,12 @@ dd .dd_new{
 .ico_right>em{
 	display: block;
 	height:20px;
-	background: url(../img/index_global.png) -93px -42px no-repeat;
+	background: url(../img/main/index_global.png) -93px -42px no-repeat;
 }
 .ico_ibox i{
 	margin: 0 auto;
 	display: block;
-	background: url(../img/index_global.png) no-repeat;
+	background: url(../img/main/index_global.png) no-repeat;
 }
 .ico_ibox .ico_i1{
 	width:31px;
@@ -2364,7 +2364,7 @@ dd .dd_new{
 	display: inline-block;
 	width:18px;
 	height:14px;
-	background: url(../img/zgs_global.png) no-repeat;
+	background: url(../img/main/zgs_global.png) no-repeat;
 	margin-right: 10px;
 }
 .ftc_center .ftc_icon1{
@@ -2386,7 +2386,7 @@ dd .dd_new{
 	display:block;
 	width:100px;
 	height:100px;
-	background: url(../img/global.png) -412px 0 no-repeat;
+	background: url(../img/main/global.png) -412px 0 no-repeat;
 }
 
 .footer_bottom{
@@ -2433,7 +2433,7 @@ dd .dd_new{
 }
 .fb_img>span{
 	display: inline-block;
-	background: url(../img/global.png) no-repeat;
+	background: url(../img/main/global.png) no-repeat;
 	cursor:pointer;
 }
 
@@ -2494,25 +2494,25 @@ dd .dd_new{
 	height:36px;
 }
 .slide_ico_zx{
-	background: url(../img/consult.gif) no-repeat;
+	background: url(../img/main/consult.gif) no-repeat;
 }
 .slide_help>a:hover .slide_ico_zx{
-	background:url(../img/slide_help.png) -122px 11px no-repeat;
+	background:url(../img/main/slide_help.png) -122px 11px no-repeat;
 }
 .slide_ico_yj{
-	background: url(../img/slide_help.png) 11px -50px no-repeat;
+	background: url(../img/main/slide_help.png) 11px -50px no-repeat;
 }
 .slide_help>a:hover .slide_ico_yj{
 	background-position: -121px -50px;
 }
 .slide_ico_gz{
-	background: url(../img/slide_help.png) 11px -109px no-repeat;
+	background: url(../img/main/slide_help.png) 11px -109px no-repeat;
 }
 .slide_help>a:hover .slide_ico_gz{
 	background-position: -121px -109px;
 }
 .slide_ico_top{
-	background: url(../img/slide_help.png) 11px -168px no-repeat;
+	background: url(../img/main/slide_help.png) 11px -168px no-repeat;
 }
 .slide_help>a:hover .slide_ico_top{
 	background-position: -121px -168px;
@@ -2648,7 +2648,7 @@ dd .dd_new{
 
 .zxbj_wm div{
 	height:106px;
-	background: url(../img/global.png) -407px -106px no-repeat;
+	background: url(../img/main/global.png) -407px -106px no-repeat;
 }
 
 .zxbj_wm em{
@@ -2658,7 +2658,7 @@ dd .dd_new{
 	right:-70px;
 	top:10px;
 	cursor:pointer;
-	background: url(../img/global.png) -253px -282px no-repeat;
+	background: url(../img/main/global.png) -253px -282px no-repeat;
 }
 
 #open{
@@ -2670,6 +2670,6 @@ dd .dd_new{
 	bottom:70px;
 	left:-40px;
 	display: none;
-	background: url(../img/open.png) no-repeat;
+	background: url(../img/main/open.png) no-repeat;
 	cursor:pointer;
 }
