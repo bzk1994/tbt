@@ -1683,6 +1683,7 @@ dd .dd_new{
 	border-left:1px solid #eee;
 	border-top:1px solid #eee;
 	position:relative;
+	cursor:pointer;
 }
 
 .zxgs_list li>a{
@@ -1704,14 +1705,20 @@ dd .dd_new{
 	width:149px;
 	height:59px;
 }
+
 .zxgs_dec1,.zxgs_dec2,.zxgs_dec3{
-	display:block;
+	display:none;
 	width:917px;
 	height:350px;
 	border: 1px solid #eee;
 	border-right: none;
 	color:#333;
 	background-color: #F8F8F8;
+}
+
+.zxgs_dec1{
+	display: block;
+
 }
 .zxgs_yy{
 	float: left;
@@ -1766,7 +1773,7 @@ dd .dd_new{
 	font-weight: normal;
 	color:#666;
 	margin-bottom: 15px;
-	width:150px;
+	width:168px;
 }
 .zxgs_name>h3:hover{
 	color: #f25618;

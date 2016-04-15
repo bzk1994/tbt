@@ -140,19 +140,6 @@ $(function(){
 
 
 
-
-
-
-
-
-
-
-
-	
-	
-
-	
-
 	// **********************************************************************************contain开始
 
 	//表单按钮
@@ -511,6 +498,31 @@ $(function(){
 			})
 
 			pro_city($('#zxbj_pro')[0],$('#zxbj_city')[0]);
+
+
+			//添加装修公司展示动画
+			$zxgs_btns = $('.zxgs_list .has_ad');
+			var ind = 0;
+			$zxgs_btns.each(function(ind){
+				$(this).attr('index',ind++);
+			})
+
+			$zxgs_btns.click(function(){
+				$('.zxgs').css('display','none');
+				$zxgs_btns.removeClass('zxgs_on');
+				$(this).addClass('zxgs_on');
+				$('.zxgs').eq(this.getAttribute('index')).css('display','block');
+				ind=$(this).attr('index');
+			});
+
+			function zxgs_start(){
+				var gs_timer = setInterval(function(){
+					var index = (++ind)%$zxgs_btns.length;
+					$zxgs_btns.eq(index).click();
+				},8000);
+			}
+			zxgs_start();
+
 
 });
 
