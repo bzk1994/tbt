@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手机土巴兔</title>
+	<link rel="stylesheet" href="../../css/app_index.css">
+</head>
+<body>
+	<section class="panel head">
+		<!-- 活动页公共头部 -->
+		<div id="head">
+			<div class="head_con">
+				<div class="head_left">
+					<ul>
+						<li class="logo"><a href="../index.html"></a></li>
+						<li><a href="../index.html">回到首页</a></li>
+						<li><a href="../zxxgt/index.html">装修效果图</a></li>
+						<li><a href="../zxgl/index.html">装修攻略</a></li>
+						<li><a href="../sjybj/index.html">设计与报价</a></li>
+						<li class="hot"><a href="../zxgs/index.html">装修公司</a></li>
+						<li><a href="../jjsc/index.html">家具商城</a></li>
+					</ul>
+				</div>
+				<div class="head_right">
+					<ul>
+						<li><a href="#">登录</a></li>
+						<li><a href="#">注册</a></li>
+						<li><b></b></li>
+						<li><a href="#">装修公司合作</a></li>
+						<li>咨询热线：4006-900-288</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- /活动页公共头部 -->
+		<div class="an">
+				<div class="mobil_client">
+					<h3 class="appdownload_ico_title"></h3>
+					<p>菜鸟装修必备神器，千万业主的选择</p>
+					<div class="client_download">
+						<a href="#" class="download1"></a>
+						<a href="#" class="download2"></a>
+					</div>
+					<img src="../../img/app/app_download_phone1.png" alt="">
+				</div>
+				<div class="code_download">
+					<img src="../../img/app/app_download_code.png" alt="">
+					<p>手机扫二维码下载</p>
+				</div>
+		</div>
+	</section>
+	<section class="panel gallery">
+		<div class="an">
+			<div class="quote_info">
+				<img src="../../img/app/app_download_phone2.png" alt="">
+				<div class="glr pst1">
+				<i></i><span>中档装修</span>
+				</div>
+				<div class="glr pst2">
+					<span>简约</span><i></i>
+				</div>
+				<div class="glr pst3">
+					<span>半包</span><i></i>
+				</div>
+				<div class="glr pst4">
+					<i></i><span>小户型</span>
+				</div>
+				<div class="glr pst5">
+					<i></i><span>56m²</span>
+				</div>
+				<em></em>
+				<i class="dtline dtline1"></i>
+				<i class="dtline dtline2"></i>
+				<i class="dtline dtline3"></i>
+				<i class="dtline dtline4"></i>
+				<i class="dtline dtline5"></i>
+			</div>
+			<div class="code_download">
+					<img src="../../img/app/app_download_code.png" alt="">
+					<p>手机扫二维码下载</p>
+				</div>
+				<div class="gallery_fot"></div>
+				<div class="fot_details">
+					<h5>装修报价<img src="../../img/app/tip_point.png" alt="">十秒搞定</h5>
+					<p>千万份真实数据积累，让你的报价快速精准</p>
+			</div>
+		</div>
+	</section>
+	<section class="panel diary">
+		<div class="an">
+			<div class="quote_info">
+				<img src="../../img/app/app_download_phone3.png" alt="">
+				<i class="price_list"></i>
+				<i class="zxstatus"></i>
+				<em></em>
+			</div>
+				<div class="code_download">
+					<img src="../../img/app/app_download_code.png" alt="">
+					<p>手机扫二维码下载</p>
+				</div>
+				<div class="gallery_fot"></div>
+				<div class="fot_details">
+					<h5>装修日记<img src="../../img/app/tip_point.png" alt="">真实账单</h5>
+					<p>学习过来人的装修经验，少走弯路规避风险</p>
+				</div>
+		</div>
+	</section>
+	<section class="panel jjmt"></section>
+	<section class="panel freesevice"></section>
+	<script type="text/javascript" src="../../js/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.scrollify.min.js"></script>
+
+	<!-- 整页滚动配置代码 -->
+	<script type="text/javascript">
+		$(function() {
+			$(".an").css('zoom',$(window).height()/1000);
+			$(".panel").css({"height":$(window).height()});
+			var timer;
+
+			$(window).resize(function() {
+				clearTimeout(timer);
+				timer = setTimeout(function() {
+					$(".panel").css({"height":$(window).height()});
+					$(".an").css('zoom',$(window).height()/1000)
+				},40);
+			});
+
+			$.scrollify({
+				section:".panel",
+				//scrollbars:false
+			});
+		})
+	</script>
+</body>
+</html>

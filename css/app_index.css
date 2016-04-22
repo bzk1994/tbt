@@ -1,0 +1,369 @@
+*{
+	margin:0;
+	padding:0;
+	outline: none;
+	font-family:'Microsoft YaHei';
+}
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	cursor:pointer;
+}
+.panel{
+	border-bottom:1px solid #ddd;
+	position:relative;
+	overflow:hidden;
+}
+#head{
+	width:100%;
+	height:35px;
+	background:#fff;
+	position:absolute;
+	top:0;
+	z-index: 100;
+}
+.head_con{
+	width:1220px;
+	margin:0 auto;
+	height:35px;
+}
+.head_con a:hover{
+	color:#f25618;
+}
+.head_left{
+	float:left;
+}
+.head_left li{
+	float:left;
+	color:#333;
+}
+.head_left a{
+	color:#333;
+	font-size:12px;
+	margin-right:26px;
+}
+.head_right{
+	float:right;
+}
+.head_right a{
+	color:#999;
+	font-size:12px;
+}
+.head_right li{
+	float:left;
+	color:#999;
+	margin-right:20px;
+	font-size:12px;
+}
+.head_right b{
+	display: block;
+	height:15px;
+	width:1px;
+	background-color: #eee;
+	margin: 8px 0;
+}
+.head_right,.head_left{
+	line-height:35px;
+}
+
+.logo{
+	margin:5px 10px 0 0;
+}
+.logo a{
+	width:28px;
+	height:28px;
+	display:block;
+	background: url(../img/app/global.png) -321px -227px no-repeat;
+	margin-right:0;
+}
+
+.hot a{
+	color:#00af63;
+}
+
+.head{
+	width:100%;
+	height:100%;
+}
+
+.head .an{
+	height:100%;
+	overflow:hidden;
+	background: url(../img/app/app_download_bg1.png) top center no-repeat;
+	background-size: cover;
+}
+
+.mobil_client{
+	width:980px;
+	height:100%;
+	margin:0 auto;
+	overflow:hidden;
+	position: relative;
+	text-align: center;
+}
+
+.appdownload_ico_title{
+	position:absolute;
+	left:0;
+	top:270px;
+	width:407px;
+	height:77px;
+	background: url(../img/app/appdownload_new_global.png) 0 0 no-repeat;
+}
+.mobil_client p{
+	position:absolute;
+	top:360px;
+	left:0;
+	color: #333;
+    letter-spacing: 8px;
+}
+.client_download{
+	position: absolute;
+	left:50px;
+	top:414px;
+	z-index:21;
+}
+.client_download a{
+	display: inline-block;
+	width: 190px;
+	height:62px;
+	background:  url(../img/app/appdownload_new_global.png) no-repeat;
+	float:left;
+	border:1px solid #333;
+	border-radius: 5px;
+	margin-right:10px;
+}
+
+.client_download .download1{
+	background-position: -1px -87px;
+}
+.client_download .download1:hover{
+	background-position: -1px -152px;
+}
+.client_download .download2{
+	background-position: -203px -86px;
+}
+.client_download .download2:hover{
+	background-position: -204px -152px;
+}
+.mobil_client>img{
+	position:absolute;
+	z-index: 20;
+	left:50px;
+	bottom:0;
+}
+
+.code_download{
+	position:absolute;
+	right:50px;
+	bottom:50px;
+	z-index:22;
+}
+.code_download img{
+	display: block;
+	margin:0 auto;
+}
+ .code_download p{
+	color:#333;
+}
+ .head .code_download p{
+	color:#fff;
+}
+
+/******************************************************第二屏样式*/
+
+.gallery .an,.diary .an{
+	height:100%;
+	overflow:hidden;
+	background: url(../img/app/app_download_bg2.png) top center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.gallery_fot{
+	width:5000px;
+	height:28%;
+	position: absolute;
+	bottom:0;
+	left:50%;
+	margin-left:-2500px;
+	background-color:#fff;
+	z-index:21;
+}
+.fot_details{
+	width:980px;
+	position: relative;
+	left:0;
+	top:10%;
+	margin:0 auto;
+	z-index:22;
+	padding-bottom:70px;
+	text-align: center;
+}
+
+.fot_details h5{
+	margin-top:7%;
+	color:#333;
+	font-size:48px;
+}
+.fot_details h5>img{
+	width:10px;
+	height:10px;
+	margin:0 10px;
+	padding-bottom: 10px;
+}
+
+.fot_details p{
+	letter-spacing: 8px;
+	color:#333;
+	line-height: 39px;
+	font-size:21px;
+}
+
+
+.quote_info{
+	width: 355px;
+    height: 627px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    left:0;
+    top:15%;
+    z-index:22;
+}
+.quote_info img{
+	position: absolute;
+	left:0;
+	top:0;
+	z-index: 2;
+}
+.gallery .quote_info>em{
+	position: absolute;
+    left: 183px;
+    top: 478px;
+    width: 267px;
+    margin-left: -358px;
+    height: 58px;
+    background: url(../img/app/appdownload_new_global.png) no-repeat;
+    background-position: 0 -219px;
+    z-index: 13;
+}
+.dtline{
+	position:absolute;
+	background: url(../img/app/appdownload_new_global.png) no-repeat;
+	z-index: 12;
+}
+
+.dtline1{
+	width: 389px;
+    height: 290px;
+    right: -11px;
+    top: -4px;
+    background-position: 0 -555px;
+    z-index: 1;
+}
+
+.dtline2{
+	width: 11px;
+    height: 53px;
+    left: -41px;
+    top: 300px;
+    background-position: -397px -555px;
+}
+.dtline3{
+	width: 106px;
+    height: 145px;
+    left: -39px;
+    top: 366px;
+    background-position: -415px -555px;
+    z-index: 3;
+}
+.dtline4{
+	    width: 386px;
+    height: 212px;
+    left: -39px;
+    top: 298px;
+    background-position: 0 -555px;
+    z-index: 3;
+}
+
+.dtline5{
+	width: 75px;
+    height: 87px;
+    left: 355px;
+    top: 301px;
+    background-position: -415px -555px;
+    z-index: 3;
+}
+
+.glr{
+	position: absolute;
+}
+.glr i{
+	width: 25px;
+    height: 25px;
+    background: url(../img/app/appdownload_new_global.png) no-repeat;
+    background-position: -295px -425px;
+    float: left;
+    margin: 10px;
+}
+
+.glr span{
+	    float: left;
+    font-size: 26px;
+    color: #000;
+}
+.pst1{
+	    right: -150px;
+    top: -31px;
+}
+
+.pst2{
+	left: -107px;
+    top: 266px;
+}
+.pst3{
+	left: -121px;
+    top: 337px;	
+}
+.pst4{
+	right: -105px;
+    top: 273px;
+}
+.pst5{
+	right: -166px;
+    top: 372px;
+}
+
+
+
+/*第三屏样式*/
+
+.diary .quote_info>em{
+	width: 332px;
+    height: 86px;
+    position: absolute;
+    left: 102px;
+    bottom: 203px;
+   	background: url(../img/app/appdownload_new_global.png) no-repeat;
+    background-position: 0 -327px;
+    z-index: 13;
+    margin-left:0;
+}
+
+.pricelist{
+	width: 68px;
+    height: 196px;
+    position: absolute;
+    right: -203px;
+    bottom: 98px;   	
+    background: url(../img/app/appdownload_new_global.png) no-repeat;
+    background-position: -571px 0;
+}
+
+.zxstatus{
+	
+}
